@@ -1,8 +1,8 @@
 spring.application.name=koiauction
 
-spring.datasource.url=jdbc:sqlserver://koi-server.database.windows.net;databaseName=KoiAuctionDB;encrypt=true;trustServerCertificate=true
-spring.datasource.username=admin123
-spring.datasource.password=123456789ttt@
+spring.datasource.url=jdbc:sqlserver://<database-url>;databaseName=KoiAuctionDB;encrypt=true;trustServerCertificate=true
+spring.datasource.username=<username>
+spring.datasource.password=<password>
 
 spring.datasource.driver-class-name=com.microsoft.sqlserver.jdbc.SQLServerDriver
 spring.jpa.hibernate.ddl-auto=none
@@ -16,16 +16,16 @@ spring.servlet.multipart.max-request-size=-1
 
 spring.mail.host=smtp.gmail.com
 spring.mail.port=587
-spring.mail.username=nguyendaobach@gmail.com
-spring.mail.password=sdqd bjjp pidp qccp
+spring.mail.username=<email>
+spring.mail.password=<password>
 spring.mail.properties.mail.smtp.auth=true
 spring.mail.properties.mail.smtp.starttls.enable=true
 
 
 vnpay.pay-url=https://sandbox.vnpayment.vn/paymentv2/vpcpay.html
-vnpay.return-url=https://koi-auction-cac0ghbvc6dghhcq.southeastasia-01.azurewebsites.net/api/wallet/vnpay_return
-vnpay.tmn-code=G0DGMV6O
-vnpay.secret-key=OQ8YF3K0T8EXOVZSMNKFRBN42RKP4ZH4
+vnpay.return-url=https://<server-url>/api/wallet/vnpay_return
+vnpay.tmn-code=<tmn-code>
+vnpay.secret-key=<secret-key>
 vnpay.api-url=https://sandbox.vnpayment.vn/merchant_webapi/api/transaction
 
 spring.jackson.time-zone=Asia/Ho_Chi_Minh
@@ -35,22 +35,22 @@ token.expire = 18000000
 
 firebase.config.type=service_account
 firebase.config.project_id=koi-auction-backend
-firebase.config.private_key_id=93b785ba074673e8d12ee8a7ddb43a40e959e975
-firebase.config.private_key=-----BEGIN PRIVATE KEY-----\\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDy396fyfk/iYAr\\n...
-firebase.config.client_email=firebase-adminsdk-qyz7h@koi-auction-backend.iam.gserviceaccount.com
-firebase.config.client_id=105436355593678356245
+firebase.config.private_key_id=<private-key-id>
+firebase.config.private_key=<private-key>
+firebase.config.client_email=<client-email>
+firebase.config.client_id=<client-id>
 firebase.config.auth_uri=https://accounts.google.com/o/oauth2/auth
 firebase.config.token_uri=https://oauth2.googleapis.com/token
 firebase.config.auth_provider_x509_cert_url=https://www.googleapis.com/oauth2/v1/certs
-firebase.config.client_x509_cert_url=https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-qyz7h@koi-auction-backend.iam.gserviceaccount.com
-firebase.config.storage_bucket=koi-auction-backend.appspot.com
-firebase.config.service_account_id=firebase-adminsdk-qyz7h@koi-auction-backend.iam.gserviceaccount.com
+firebase.config.client_x509_cert_url=<client-x509-cert-url>
+firebase.config.storage_bucket=<storage-bucket>
+firebase.config.service_account_id=<service-account-id>
 
 
-spring.security.oauth2.client.registration.google.client-id=910756580458-ipk0vdo4sode9p86ngbhp4sc91fe2l5e.apps.googleusercontent.com
-spring.security.oauth2.client.registration.google.client-secret=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
+spring.security.oauth2.client.registration.google.client-id=<client-id>
+spring.security.oauth2.client.registration.google.client-secret=<client-secret>
 spring.security.oauth2.client.registration.google.scope=email,profile
-spring.security.oauth2.client.registration.google.redirect-uri=https://koi-auction-cac0ghbvc6dghhcq.southeastasia-01.azurewebsites.net/login/oauth2/code/google
+spring.security.oauth2.client.registration.google.redirect-uri=https://<server-url>/login/oauth2/code/google
 spring.security.oauth2.client.provider.google.authorization-uri=https://accounts.google.com/o/oauth2/auth
 spring.security.oauth2.client.provider.google.token-uri=https://oauth2.googleapis.com/token
 spring.security.oauth2.client.provider.google.user-info-uri=https://www.googleapis.com/userinfo/me
